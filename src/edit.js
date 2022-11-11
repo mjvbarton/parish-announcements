@@ -49,7 +49,7 @@ export default function Edit({attributes: {textAlign}, setAttributes}) {
 	return (
 		<>
 			<div { ...blockProps }>
-				{!src && 'Loading...'}
+				{!src && __('Loading...')}
 				{src && (
 					<img src={src} alt={__('Actual announcement from the parish', 'parish-announcements')} />
 				)}				

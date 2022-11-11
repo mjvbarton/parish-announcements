@@ -1,0 +1,20 @@
+{
+    "name": "mjvbarton/parish-announcements",
+    "description": "A plugin for displaying parish announcements at wordpress powered website",
+    "type": "wordpress-plugin",
+    "license": "GNU-GPL-v2.0-or-higher",
+    "autoload": {
+        "psr-4": {
+            "Mjvbarton\\ParishAnnouncements\\": "includes/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mjvbarton",
+            "email": "matej.8.barton@gmail.com"
+        }
+    ],
+    "require": {
+        "htmlburger/carbon-fields": "^3.3"
+    }
+}

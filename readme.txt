@@ -1,55 +1,54 @@
 === Parish Announcements ===
-Contributors:      The WordPress Contributors
-Tags:              block
-Tested up to:      6.1
-Stable tag:        0.1.0
-License:           GPL-2.0-or-later
-License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Contributors:       The WordPress Contributors
+Tags:               block
+Tested up to:       6.1
+Requires at least:  5.3
+Requires PHP:       7.4
+Stable tag:         1.0.0-beta
+License:            GPL-2.0-or-later
+License URI:        https://www.gnu.org/licenses/gpl-2.0.html
+Contributors:       mjvbarton
 
-Example block scaffolded with Create Block tool.
+Block for displaying parish announcements in pdf file.
 
 == Description ==
 
-This is the long description. No limit, and you can use Markdown (as well as in the following sections).
+A handy tool for websites of parishes or for all of those who need to regularly update some pdf document used at real world dashboards.
+Only thing you need is to prepare a PDF file that you upload to your Wordpress site. In the plugin you select the active announcement file from the media gallery.
+The file is then converted to the jpeg and displayed for the visitors.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+You can choose where to display the contents by our custom block "Parish Announcements" in the Block Editor. The plugin uses the native `php_imagick` extension for the conversion.
+
+**Note:** This is the BETA version of the plugin. The future version will have support for WordPress Plugin Directory and for shortcodes.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
+1. Install the plugin through the WordPress plugins screen directly by uploading it to the site.
+2. Activate the plugin through the 'Plugins' screen in WordPress
 
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/parish-announcements` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
+= For plugin developers =
+1. Download the source code from the github repository to your development environment
+2. Unzip the contents to `{your-wordpress}/wp-content/plugins/parish-announcements`
+3. Open terminal in the plugin folder and run `npm install` and `composer install`
 
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= Will this plugin be available in the WordPress Plugin Directory? =
 
-An answer to that question.
+Soon. The biggest benefit from this will be the option to automatically update the plugin.
 
-= What about foo bar? =
+= I am not using the WordPress Block Editor, can I use the plugin via shortcode? =
 
-Answer to foo bar dilemma.
+Unfortunately not. In the `1.0.0-beta` version there will be no support for WordPress shortcodes.
 
-== Screenshots ==
+= My plugin cannot activate, what should I do? =
+First of all, check if the `php_imagick` extension is enabled. If the problem persists, check if the php process has sufficient privileges
+to create files and directories in your `WP_CONTENT_DIR` location.
 
-1. This screen shot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Note that the screenshot is taken from
-the /assets directory or the directory that contains the stable readme.txt (tags or trunk). Screenshots in the /assets
-directory take precedence. For example, `/assets/screenshot-1.png` would win over `/tags/4.3/screenshot-1.png`
-(or jpg, jpeg, gif).
-2. This is the second screen shot
+If the problem still persists, please see the open issues [here](https://github.com/mjvbarton/parish-announcements/issues).
 
 == Changelog ==
 
-= 0.1.0 =
-* Release
-
-== Arbitrary section ==
-
-You may provide arbitrary sections, in the same format as the ones above. This may be of use for extremely complicated
-plugins where more information needs to be conveyed that doesn't fit into the categories of "description" or
-"installation." Arbitrary sections will be shown below the built-in sections outlined above.
+= 1.0.0-beta =
+* Pre-Release

@@ -6,7 +6,10 @@
  */
 
 .wp-block-create-block-parish-announcements {
-	img{
+	figure{
 		width: 100%;
+	}
+	img{
+		min-width: 100%;
 	}
 }
