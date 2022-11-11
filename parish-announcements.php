@@ -74,19 +74,17 @@ add_action( 'rest_api_init', function () {
 function pariann_notice_no_imagick(){
 	?>
 	<div class="notice notice-error">
-		<p><?php printf(esc_html__( 'Required extension %s not found.', 'parish-announcements' ), 'php_imagick'); ?></p>		
+		<p><?php printf(__( 'Required extension %s not found.', 'parish-announcements' ), 'php_imagick'); ?></p>		
 	</div>
 	<?php
 }
-
 
 /**
  * Activates the plugin - checking if the php_imagick is enabled, and creates upload directory for this plugin
  */
 function pariann_activate_plugin(){
-	if(!extension_loaded('imagick')){
-		add_action('admin_notices', 'pariann_error_no_imagick');
-		deactivate_plugins(__FILE__, true);		
+	if(!extension_loaded('imagick')){		
+		wp_die(sprintf(__( 'Required extension %s not found.', 'parish-announcements' ), 'php_imagick'));
 	}
 
 	if(!file_exists(PARIANN_UPLOAD_DIR)){
