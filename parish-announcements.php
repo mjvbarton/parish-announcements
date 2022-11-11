@@ -17,6 +17,11 @@ use Carbon_Fields\Carbon_Fields;
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
+if(!defined('ABSPATH')){
+	http_response_code(403);
+	die("Forbidden");
+}
+
 /**
  * The content where converted pdfs will be contained
  */
